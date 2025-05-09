@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #cacaca;
+    border-radius: 50px 50px 50px 50px;
+    color: #573232;
+    font-size: 50px;
+    align-content: baseline;
+    box-sizing: border-box;
+    border: 2px solid #bdb0b0;
+    text-shadow: 2px 2px 4px #b5b2b2;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+}
+.container h1 {
+    margin: 0;
+    padding: 20;
+    text-align: center;
+    color: #333;
+}
+
+.input text {
+    width: 100%;
+    padding: 20px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #9a9191;
+    border-radius: 5px;
+}
+ul {
+    list-style: none;
+    padding: 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: flexbox;
+}
+ul li {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+}
+ul li:hover {
+    background: #f0f0f0;
+    cursor: pointer;
+}
+li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+}
+li button{
+    flex: 1;
+    padding: 30px;
+    margin: 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+}
