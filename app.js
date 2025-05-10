@@ -28,10 +28,19 @@ function mostrarTareas() {
 function agregarTarea() {
   const tarea = inputTarea.value.trim();
   if (tarea === "") {
-    alert("Por favor, ingresa una tarea.");
-    return;
+    Swal.fire({
+  title: "Error",
+  text: "El campo no puede estar vacío",
+  icon: "error"
+});
+  return;
   }
   tareas.push(tarea);
+  Swal.fire({
+    title: "Éxito",
+    text: "Tarea ingresada correctamente",
+    icon: "success"
+  });
   localStorage.setItem("tareas", JSON.stringify(tareas));
   inputTarea.value = "";
   mostrarTareas();
@@ -39,6 +48,29 @@ function agregarTarea() {
 
 // 5.- Borrar una tarea
 function borrarTarea(index) {
+  // Eliminar tarea con de éxito
+  Swal.fire({
+    title: "¡Oye!",
+    text: "¿Seguro que quieres eliminar esta tarea?",
+    icon: "Yes/No",
+    showCancelButton: true,
+    confirmButtonText: "Sí, eliminar",
+    cancelButtonText: "No, cancelar"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "¡Eliminado!",
+        text: "La tarea ha sido eliminada",
+        icon: "success"
+      });
+    } else {
+      Swal.fire({
+        title: "Cancelado",
+        text: "La tarea no ha sido eliminada",
+        icon: "error"
+      });
+    }
+  });
   tareas.splice(index, 1);
   localStorage.setItem("tareas", JSON.stringify(tareas));
   mostrarTareas();
@@ -51,7 +83,11 @@ function editarTarea(index) {
   btnAgregar.onclick = function () {
     const tareaActualizada = inputTarea.value.trim();
     if (tareaActualizada === "") {
-      alert("Por favor, ingresa una tarea.");
+     Swal.fire({
+  title: "Error",
+  text: "El campo no puede estar vacío",
+  icon: "error"
+});
       return;
     }
     tareas[index] = tareaActualizada;
