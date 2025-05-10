@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #dbd9d9;
+    
 }
 
 h1 {
@@ -15,7 +18,7 @@ h1 {
     padding: 15px;
     background-color: #cacaca;
     border-radius: 50px 50px 50px 50px;
-    color: #573232;
+    color: #947651;
     font-size: 50px;
     align-content: baseline;
     box-sizing: border-box;
@@ -132,8 +135,5 @@ footer {
     text-align: center;
     margin: 20px 0;
     padding: 15px;
-
-    
-    
 }
 
